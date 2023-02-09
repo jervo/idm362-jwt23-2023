@@ -13,6 +13,9 @@ class ViewController: UIViewController {
   @IBOutlet weak var nameText: UITextField!
   @IBOutlet weak var spinner: UIActivityIndicatorView!
   
+  @IBOutlet weak var PopUpButton: UIButton!
+  
+  
   // Global vars
   var vCounter:Int = 0
   
@@ -26,6 +29,9 @@ class ViewController: UIViewController {
     
     // Start Spinner
     spinner.startAnimating()
+    
+    // Set up Pop Up Menu
+    SetUpPopUpButton()
   }
   
   @IBAction func AddBTN(_ sender: Any) {
@@ -58,6 +64,24 @@ class ViewController: UIViewController {
   @IBAction func FinishLine(_ sender: UISegmentedControl) {
     displayLabel.text = "You Finished: \(sender.titleForSegment(at: sender.selectedSegmentIndex)!)"
   }
+  
+  func SetUpPopUpButton() {
+    let optionsObj = {
+//      (action : UIAction) in print(action.title)
+      (action : UIAction) in self.displayLabel.text = action.title
+    }
+    
+    PopUpButton.menu = UIMenu(children : [
+      UIAction(title: "Mild", state : .on, handler: optionsObj),
+      UIAction(title: "Medium", handler: optionsObj),
+      UIAction(title: "Spicy", handler: optionsObj)
+    ])
+    
+    PopUpButton.showsMenuAsPrimaryAction = true
+    PopUpButton.changesSelectionAsPrimaryAction = true
+    PopUpButton.tintColor = UIColor(named: "Prince")
+  }
+  
   
 }
 

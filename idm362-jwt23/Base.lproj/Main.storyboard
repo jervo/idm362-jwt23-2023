@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -116,6 +117,16 @@
                                     <action selector="FinishLine:" destination="BYZ-38-t0r" eventType="valueChanged" id="YPL-ds-b3r"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C3o-PF-lMm">
+                                <rect key="frame" x="176" y="679" width="41" height="30"/>
+                                <menu key="menu" id="4A9-vJ-ldz">
+                                    <children>
+                                        <command title="Item 1" id="ZpU-eG-UEv"/>
+                                        <command title="Item 2" id="3XG-LI-P8D"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -123,9 +134,11 @@
                             <constraint firstItem="XQV-E5-FU1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8t5-3E-jSk"/>
                             <constraint firstItem="Pn3-r7-Mdo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FPp-RK-EuG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zK7-MA-gEl" secondAttribute="trailing" constant="20" id="I6C-si-nxx"/>
+                            <constraint firstItem="C3o-PF-lMm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NkS-p5-Lxd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XQV-E5-FU1" secondAttribute="trailing" constant="20" id="OGW-8a-8oJ"/>
                             <constraint firstItem="Pn3-r7-Mdo" firstAttribute="top" secondItem="rQx-XZ-Svv" secondAttribute="bottom" constant="20" id="OZj-Zn-gSz"/>
                             <constraint firstItem="BX3-IG-XUB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="S52-pP-4oS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C3o-PF-lMm" secondAttribute="bottom" constant="60" id="TGa-2e-93n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pn3-r7-Mdo" secondAttribute="trailing" constant="20" id="XLa-s5-2Qj"/>
                             <constraint firstItem="rQx-XZ-Svv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XgJ-UG-TbW"/>
                             <constraint firstItem="lPh-1b-ese" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YhJ-HP-PWe"/>
@@ -145,6 +158,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="pencil" catalog="system" id="F9c-EJ-cHY"/>
                     <connections>
+                        <outlet property="PopUpButton" destination="C3o-PF-lMm" id="K3p-EU-03E"/>
                         <outlet property="displayLabel" destination="XQV-E5-FU1" id="dGc-xS-wux"/>
                         <outlet property="nameText" destination="lPh-1b-ese" id="eMj-WN-AdO"/>
                         <outlet property="spinner" destination="I6I-oH-e3J" id="mDW-3h-pwa"/>
