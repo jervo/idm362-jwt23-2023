@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  
   @IBOutlet weak var displayLabel: UILabel!
   @IBOutlet weak var nameText: UITextField!
   @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -56,11 +55,9 @@ class ViewController: UIViewController {
     }
   }
   
-  
   @IBAction func FinishLine(_ sender: UISegmentedControl) {
     displayLabel.text = "You Finished: \(sender.titleForSegment(at: sender.selectedSegmentIndex)!)"
   }
   
-
 }
 

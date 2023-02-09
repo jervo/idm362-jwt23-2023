@@ -145,7 +145,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="pencil" catalog="system" id="F9c-EJ-cHY"/>
                     <connections>
-                        <outlet property="DisplayLabel" destination="XQV-E5-FU1" id="59U-Ah-rGG"/>
+                        <outlet property="displayLabel" destination="XQV-E5-FU1" id="dGc-xS-wux"/>
                         <outlet property="nameText" destination="lPh-1b-ese" id="eMj-WN-AdO"/>
                         <outlet property="spinner" destination="I6I-oH-e3J" id="mDW-3h-pwa"/>
                     </connections>
@@ -157,7 +157,7 @@
         <!--Settings-->
         <scene sceneID="wZH-JA-bwt">
             <objects>
-                <viewController id="Vwa-PD-c3K" sceneMemberID="viewController">
+                <viewController id="Vwa-PD-c3K" customClass="ViewControllerSettings" customModule="idm362_jwt23" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WwX-Eg-CtA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
