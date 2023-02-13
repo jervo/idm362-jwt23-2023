@@ -13,6 +13,7 @@
 		A770B7972979914200824B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A770B7952979914200824B3A /* Main.storyboard */; };
 		A770B7992979914400824B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A770B7982979914400824B3A /* Assets.xcassets */; };
 		A770B79C2979914400824B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A770B79A2979914400824B3A /* LaunchScreen.storyboard */; };
+		A7A6D126299552D80026F615 /* ViewControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A6D125299552D80026F615 /* ViewControllerSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A770B7982979914400824B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A770B79B2979914400824B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A770B79D2979914400824B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7A6D125299552D80026F615 /* ViewControllerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				A770B7912979914200824B3A /* SceneDelegate.swift */,
 				A770B7932979914200824B3A /* ViewController.swift */,
 				A770B7952979914200824B3A /* Main.storyboard */,
+				A7A6D125299552D80026F615 /* ViewControllerSettings.swift */,
 				A770B7982979914400824B3A /* Assets.xcassets */,
 				A770B79A2979914400824B3A /* LaunchScreen.storyboard */,
 				A770B79D2979914400824B3A /* Info.plist */,
@@ -141,6 +144,7 @@
 				A770B7942979914200824B3A /* ViewController.swift in Sources */,
 				A770B7902979914200824B3A /* AppDelegate.swift in Sources */,
 				A770B7922979914200824B3A /* SceneDelegate.swift in Sources */,
+				A7A6D126299552D80026F615 /* ViewControllerSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "idm362-jwt23/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ThisBeIt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -316,6 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "idm362-jwt23/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ThisBeIt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -35,30 +35,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOLLA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MF-Sl-AgA">
-                                <rect key="frame" x="123.66666666666669" y="398.66666666666669" width="146" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlaceHolder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCN-VR-xP6">
+                                <rect key="frame" x="20" y="79" width="353" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc7-PJ-QJE">
+                                <rect key="frame" x="20" y="128" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ADD 1">
+                                    <color key="baseBackgroundColor" name="Prince"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="AddBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nmx-fF-YwI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="034-9y-AJa">
+                                <rect key="frame" x="20" y="241.33333333333337" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="TOUCH ME">
+                                    <color key="baseBackgroundColor" name="Prince"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="AddBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWw-RR-6D4"/>
+                                    <action selector="TouchMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LXe-fJ-ovd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name ?" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCv-AG-x7W">
+                                <rect key="frame" x="20" y="183" width="353" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6MF-Sl-AgA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Up-1w-gd4"/>
-                            <constraint firstItem="6MF-Sl-AgA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="prC-t1-fkj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCN-VR-xP6" secondAttribute="trailing" constant="20" id="9ut-88-NnR"/>
+                            <constraint firstItem="dCv-AG-x7W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DRF-Z2-KL0"/>
+                            <constraint firstItem="034-9y-AJa" firstAttribute="top" secondItem="dCv-AG-x7W" secondAttribute="bottom" constant="20" id="IE7-jT-aev"/>
+                            <constraint firstItem="dCv-AG-x7W" firstAttribute="top" secondItem="bc7-PJ-QJE" secondAttribute="bottom" constant="20" id="Jnc-I5-iQr"/>
+                            <constraint firstItem="bc7-PJ-QJE" firstAttribute="top" secondItem="ZCN-VR-xP6" secondAttribute="bottom" constant="20" id="LB2-EL-rr8"/>
+                            <constraint firstItem="ZCN-VR-xP6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O8V-iA-8h9"/>
+                            <constraint firstItem="ZCN-VR-xP6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Qw4-G6-UGG"/>
+                            <constraint firstItem="bc7-PJ-QJE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YWG-tv-HBs"/>
+                            <constraint firstItem="034-9y-AJa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bQL-t1-tVh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bc7-PJ-QJE" secondAttribute="trailing" constant="20" id="gJu-dd-eha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="034-9y-AJa" secondAttribute="trailing" constant="20" id="uiL-Hu-gJj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dCv-AG-x7W" secondAttribute="trailing" constant="20" id="yM4-BY-Ahu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="pencil" catalog="system" id="F9c-EJ-cHY"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="ZCN-VR-xP6" id="Lme-OK-bnU"/>
+                        <outlet property="nameText" destination="dCv-AG-x7W" id="Atv-KO-Efh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2211.450381679389" y="122.53521126760565"/>
+            <point key="canvasLocation" x="-2294" y="123"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wZH-JA-bwt">
             <objects>
-                <viewController id="Vwa-PD-c3K" sceneMemberID="viewController">
+                <viewController id="Vwa-PD-c3K" customClass="ViewControllerSettings" customModule="idm362_jwt23" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WwX-Eg-CtA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zva-5b-dV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1532" y="123"/>
+            <point key="canvasLocation" x="-1587" y="123"/>
         </scene>
         <!--About-->
         <scene sceneID="2lI-Lv-aS1">
@@ -143,6 +183,9 @@
         <image name="eraser.fill" catalog="system" width="128" height="119"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="people" width="30" height="30"/>
+        <namedColor name="Prince">
+            <color red="0.58099997043609619" green="0.1289999932050705" blue="0.57499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
