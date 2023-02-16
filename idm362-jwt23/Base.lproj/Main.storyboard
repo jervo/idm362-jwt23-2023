@@ -193,21 +193,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNO-jm-YH1">
-                                <rect key="frame" x="139" y="408.66666666666669" width="115" height="35"/>
+                                <rect key="frame" x="20" y="392" width="353" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kgl-u3-zKf"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Popup View">
                                     <color key="baseBackgroundColor" name="Prince"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Kmg-CW-g8B" kind="presentation" modalPresentationStyle="automatic" modalTransitionStyle="flipHorizontal" id="qRe-F0-CUc"/>
+                                    <segue destination="Kmg-CW-g8B" kind="presentation" modalPresentationStyle="automatic" id="qRe-F0-CUc"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G4-8f-gdG">
+                                <rect key="frame" x="20" y="456" width="353" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2e4-d9-Kja"/>
+                                </constraints>
+                                <color key="tintColor" name="Prince"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="NavBar View"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5EW-us-loo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NNO-jm-YH1" firstAttribute="centerY" secondItem="sFx-gr-MMp" secondAttribute="centerY" id="FkJ-67-fPU"/>
-                            <constraint firstItem="NNO-jm-YH1" firstAttribute="centerX" secondItem="sFx-gr-MMp" secondAttribute="centerX" id="H7Z-98-zKJ"/>
+                            <constraint firstItem="5G4-8f-gdG" firstAttribute="leading" secondItem="5EW-us-loo" secondAttribute="leading" constant="20" id="1dP-aY-vbG"/>
+                            <constraint firstItem="5EW-us-loo" firstAttribute="trailing" secondItem="NNO-jm-YH1" secondAttribute="trailing" constant="20" id="Fx2-05-nrd"/>
+                            <constraint firstItem="NNO-jm-YH1" firstAttribute="leading" secondItem="5EW-us-loo" secondAttribute="leading" constant="20" id="Zeg-Hl-W5s"/>
+                            <constraint firstItem="5EW-us-loo" firstAttribute="trailing" secondItem="5G4-8f-gdG" secondAttribute="trailing" constant="20" id="cGX-Oq-t93"/>
+                            <constraint firstItem="5G4-8f-gdG" firstAttribute="top" secondItem="NNO-jm-YH1" secondAttribute="bottom" constant="20" id="rEi-ej-Px3"/>
+                            <constraint firstItem="NNO-jm-YH1" firstAttribute="centerY" secondItem="5EW-us-loo" secondAttribute="centerY" id="w6u-Qb-Ab0"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="people" id="7Fn-lr-JKu"/>
@@ -241,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTG-Gi-PKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="123"/>
+            <point key="canvasLocation" x="77" y="-137"/>
         </scene>
     </scenes>
     <resources>
