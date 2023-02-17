@@ -22,7 +22,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1OQ-Wm-OTX"/>
                         <segue destination="Vwa-PD-c3K" kind="relationship" relationship="viewControllers" id="H0Y-J3-5nN"/>
-                        <segue destination="f38-US-FiV" kind="relationship" relationship="viewControllers" id="ghd-ej-BQh"/>
+                        <segue destination="f38-US-FiV" kind="relationship" relationship="viewControllers" id="S8n-Go-T4D"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ph1-hU-1TK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -184,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="-1532" y="123"/>
         </scene>
-        <!--About-->
+        <!--ABOUT-->
         <scene sceneID="2lI-Lv-aS1">
             <objects>
                 <viewController id="f38-US-FiV" customClass="ViewControllerAbout" customModule="idm362_jwt23" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,32 +205,21 @@
                                     <segue destination="Kmg-CW-g8B" kind="presentation" modalPresentationStyle="automatic" id="qRe-F0-CUc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G4-8f-gdG">
-                                <rect key="frame" x="20" y="456" width="353" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="2e4-d9-Kja"/>
-                                </constraints>
-                                <color key="tintColor" name="Prince"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="NavBar View"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5EW-us-loo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5G4-8f-gdG" firstAttribute="leading" secondItem="5EW-us-loo" secondAttribute="leading" constant="20" id="1dP-aY-vbG"/>
                             <constraint firstItem="5EW-us-loo" firstAttribute="trailing" secondItem="NNO-jm-YH1" secondAttribute="trailing" constant="20" id="Fx2-05-nrd"/>
                             <constraint firstItem="NNO-jm-YH1" firstAttribute="leading" secondItem="5EW-us-loo" secondAttribute="leading" constant="20" id="Zeg-Hl-W5s"/>
-                            <constraint firstItem="5EW-us-loo" firstAttribute="trailing" secondItem="5G4-8f-gdG" secondAttribute="trailing" constant="20" id="cGX-Oq-t93"/>
-                            <constraint firstItem="5G4-8f-gdG" firstAttribute="top" secondItem="NNO-jm-YH1" secondAttribute="bottom" constant="20" id="rEi-ej-Px3"/>
                             <constraint firstItem="NNO-jm-YH1" firstAttribute="centerY" secondItem="5EW-us-loo" secondAttribute="centerY" id="w6u-Qb-Ab0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="people" id="7Fn-lr-JKu"/>
+                    <tabBarItem key="tabBarItem" title="About" image="folder.fill" catalog="system" id="C2V-Lh-Rm0"/>
+                    <navigationItem key="navigationItem" title="ABOUT" id="PLw-qA-i1L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MlJ-59-xGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-886.25954198473278" y="122.53521126760565"/>
+            <point key="canvasLocation" x="-795" y="123"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7gl-E2-0qK">
@@ -257,13 +246,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTG-Gi-PKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="-137"/>
+            <point key="canvasLocation" x="33" y="123"/>
         </scene>
     </scenes>
     <resources>
         <image name="eraser.fill" catalog="system" width="128" height="119"/>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="people" width="30" height="30"/>
         <namedColor name="AccentColor">
             <color red="0.44999998807907104" green="0.98100000619888306" blue="0.47400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
