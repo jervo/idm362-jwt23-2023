@@ -32,7 +32,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ph1-hU-1TK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1531" y="-622"/>
+            <point key="canvasLocation" x="-1886" y="-629"/>
         </scene>
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
