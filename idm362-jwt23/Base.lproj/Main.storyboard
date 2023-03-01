@@ -25,6 +25,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="xw0-Vf-XMr" kind="relationship" relationship="viewControllers" id="q8i-Fb-Ole"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1OQ-Wm-OTX"/>
                         <segue destination="Vwa-PD-c3K" kind="relationship" relationship="viewControllers" id="H0Y-J3-5nN"/>
                         <segue destination="f38-US-FiV" kind="relationship" relationship="viewControllers" id="ghd-ej-BQh"/>
@@ -33,6 +34,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ph1-hU-1TK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1886" y="-629"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="qbu-mn-XxG">
+            <objects>
+                <tableViewController id="eHh-Tz-qyp" customClass="TableViewControllerFriends" customModule="idm362_jwt23" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="PdJ-qk-mDV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3iB-SJ-cs9">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3iB-SJ-cs9" id="zhf-me-OIm">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eHh-Tz-qyp" id="GJa-M2-veY"/>
+                            <outlet property="delegate" destination="eHh-Tz-qyp" id="Dsx-Z2-a88"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Friends" id="IJL-tq-jiQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jFN-HR-2SU">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addName:" destination="eHh-Tz-qyp" id="9cA-d5-59j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="w2C-tc-XIe" kind="show" identifier="showDetail" id="XRm-Zz-qbz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usl-Zw-Rcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="-630"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="Glb-U4-jie">
+            <objects>
+                <viewController title="Detail" id="w2C-tc-XIe" customClass="DetailViewController" customModule="idm362_jwt23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dfi-Bg-QQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Goes Here!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEx-cc-JuP">
+                                <rect key="frame" x="64.333333333333343" y="398.66666666666669" width="264.33333333333326" height="55"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gvn-1u-tke"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hEx-cc-JuP" firstAttribute="centerY" secondItem="Dfi-Bg-QQZ" secondAttribute="centerY" id="6MW-6F-Bmn"/>
+                            <constraint firstItem="hEx-cc-JuP" firstAttribute="centerX" secondItem="Dfi-Bg-QQZ" secondAttribute="centerX" id="7ht-Si-dn0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="OMu-bw-qQI"/>
+                    <connections>
+                        <outlet property="bigName" destination="hEx-cc-JuP" id="Mxt-ik-sjl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5S-H6-kdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="-630"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="sQD-Yd-LdE">
+            <objects>
+                <navigationController id="xw0-Vf-XMr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.fill" catalog="system" id="u0o-Ju-mhy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wFA-a3-BXq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eHh-Tz-qyp" kind="relationship" relationship="rootViewController" id="liD-Au-gJd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLC-Ck-k1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-886" y="-630"/>
         </scene>
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
@@ -312,15 +400,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTG-Gi-PKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="123"/>
+            <point key="canvasLocation" x="-118" y="123"/>
         </scene>
     </scenes>
     <resources>
         <image name="eraser.fill" catalog="system" width="128" height="119"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="people" width="30" height="30"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
-            <color red="0.44999998807907104" green="0.98100000619888306" blue="0.47400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.059999998658895493" green="0.65600001811981201" blue="0.27399998903274536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Prince">
             <color red="0.58099997043609619" green="0.1289999932050705" blue="0.57499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
