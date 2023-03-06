@@ -6,11 +6,16 @@
 //
 
 import UIKit
+// COREDATA 1
+import CoreData
 
 class TableViewControllerFriends: UITableViewController {
   
   // Global Vars
    var fNames: [String] = ["Judith", "Jennifa", "John", "Joseph", "Jervis"]
+  
+  // COREDATA 2
+  var peopleObj: [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,29 @@ class TableViewControllerFriends: UITableViewController {
 
       // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
       // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+  
+    // COREDATA 3
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+
+      guard let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate else {
+        return
+      }
+      
+      //1
+      let managedContext = appDelegate.persistentContainer.viewContext
+
+      //2
+      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
+
+      //3
+      do {
+        peopleObj = try managedContext.fetch(fetchRequest)
+      } catch let error as NSError {
+        print("Could not fetch. \(error), \(error.userInfo)")
+      }
     }
 
     // MARK: - Table view data source
@@ -34,7 +62,10 @@ class TableViewControllerFriends: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
       -> Int {
       // #warning Incomplete implementation, return the number of rows
-      return fNames.count
+        
+      // return fNames.count
+      // COREDATA 4
+      return peopleObj.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
@@ -44,12 +75,18 @@ class TableViewControllerFriends: UITableViewController {
         // let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
       
-        // CUSTOM CELL 2
-        // cell.textLabel?.text = fNames[indexPath.row]
-        cell.fName?.text = fNames[indexPath.row]
+//        // CUSTOM CELL 2
+//        // cell.textLabel?.text = fNames[indexPath.row]
+//        cell.fName?.text = fNames[indexPath.row]
+        
+        // COREDATA 5
+        let personObj = peopleObj[indexPath.row]
+        cell.fName?.text = personObj.value(forKey: "name") as? String
+        
+        
         let rNum = Int.random(in: 1...100)
         cell.fNumStr?.text = String(rNum)
-      
+        
         return cell
     }
 
@@ -61,15 +98,37 @@ class TableViewControllerFriends: UITableViewController {
         return true
     }
     */
-
   
+  // COREDATA 6
+  // Link context to persistentContainer
+  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  
+    // Swipe to delete
+    //
     // jwt STEP THREE
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
         // Delete from array
-        fNames.remove(at: indexPath.row)
-        print("fname count \(fNames)")
+//        fNames.remove(at: indexPath.row)
+//        print("fname count \(fNames)")
+        
+        // COREDATA 8
+        // extract person from array
+        let onePerson = peopleObj[indexPath.row]
+        // Delete that person from context
+        context.delete(onePerson)
+        // Save context back to CoreData
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        // get fresh data
+        do {
+          peopleObj = try context.fetch(Person.fetchRequest())
+          print("People Entity Fetching Successfull.. " + String(peopleObj.count))
+        }
+        catch {
+          print("People Entity Fetching Failed")
+        }
+        
         // Reload Table
         tableView.reloadData()
       }
@@ -104,8 +163,12 @@ class TableViewControllerFriends: UITableViewController {
         let nameToSave = textField.text else {
           return
       }
-      // Update Array
-      self.fNames.append(nameToSave)
+//      // Update Array
+//      self.fNames.append(nameToSave)
+      
+      // COREDATA 7
+      self.saveToCore(name: nameToSave)
+      
       // Reload Table
       self.tableView.reloadData()
     }
@@ -120,6 +183,33 @@ class TableViewControllerFriends: UITableViewController {
     present(alertObj, animated: true)
   }
   
+  //COREDATA 8
+  func saveToCore(name: String) {
+    guard let appDelegate =
+      UIApplication.shared.delegate as? AppDelegate else {
+      return
+    }
+
+    // 1
+    let managedContext = appDelegate.persistentContainer.viewContext
+
+    // 2
+    let entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContext)!
+
+    let person = NSManagedObject(entity: entity, insertInto: managedContext)
+
+    // 3
+    person.setValue(name, forKeyPath: "name")
+
+    // 4
+    do {
+      try managedContext.save()
+      peopleObj.append(person)
+    } catch let error as NSError {
+      print("Could not save. \(error), \(error.userInfo)")
+    }
+  }
+  
 
 
   // MARK: - Navigation
@@ -130,8 +220,14 @@ class TableViewControllerFriends: UITableViewController {
   var selRowName:String = ""
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print("Row selected " + indexPath.row.description)
+    
     selRowNum = indexPath.row
-    selRowName = fNames[selRowNum]
+//    selRowName = fNames[selRowNum]
+    
+    //COREDATA 9
+    let personObj = peopleObj[indexPath.row]
+    selRowName = (personObj.value(forKey: "name") as! String)
+    
     // Trigger Segue
     performSegue(withIdentifier: "showDetail", sender: nil)
   }
