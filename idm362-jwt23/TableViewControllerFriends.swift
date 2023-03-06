@@ -39,9 +39,18 @@ class TableViewControllerFriends: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
       -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-      cell.textLabel?.text = fNames[indexPath.row]
-      return cell
+        
+        // CUSTOM CELL 1
+        // let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+      
+        // CUSTOM CELL 2
+        // cell.textLabel?.text = fNames[indexPath.row]
+        cell.fName?.text = fNames[indexPath.row]
+        let rNum = Int.random(in: 1...100)
+        cell.fNumStr?.text = String(rNum)
+      
+        return cell
     }
 
 

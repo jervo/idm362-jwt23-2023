@@ -44,13 +44,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3iB-SJ-cs9">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3iB-SJ-cs9" customClass="CustomTableViewCell" customModule="idm362_jwt23" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="40.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3iB-SJ-cs9" id="zhf-me-OIm">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="40.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="ctj-Fe-Fl1">
+                                            <rect key="frame" x="20" y="10.000000000000002" width="353" height="20.666666666666671"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95b-hL-FlN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="20.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haf-A7-avf">
+                                                    <rect key="frame" x="227" y="0.0" width="126" height="20.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ctj-Fe-Fl1" secondAttribute="bottom" constant="10" id="Rcw-lj-HJZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ctj-Fe-Fl1" secondAttribute="trailing" constant="20" id="V6u-mX-h2t"/>
+                                        <constraint firstItem="ctj-Fe-Fl1" firstAttribute="leading" secondItem="zhf-me-OIm" secondAttribute="leading" constant="20" id="Y50-Vm-RG4"/>
+                                        <constraint firstItem="ctj-Fe-Fl1" firstAttribute="top" secondItem="zhf-me-OIm" secondAttribute="top" constant="10" id="qku-ih-UhJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fName" destination="95b-hL-FlN" id="bDa-eR-xER"/>
+                                    <outlet property="fNumStr" destination="haf-A7-avf" id="2wf-IA-PRx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
