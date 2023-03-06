@@ -25,6 +25,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Cyu-kE-yH4" kind="relationship" relationship="viewControllers" id="skN-DM-h23"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1OQ-Wm-OTX"/>
                         <segue destination="Vwa-PD-c3K" kind="relationship" relationship="viewControllers" id="H0Y-J3-5nN"/>
                         <segue destination="f38-US-FiV" kind="relationship" relationship="viewControllers" id="ghd-ej-BQh"/>
@@ -33,6 +34,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ph1-hU-1TK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1886" y="-629"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="fHr-jv-CiZ">
+            <objects>
+                <tableViewController title="Friends" id="hrh-ki-MRR" customClass="TableViewController" customModule="idm362_jwt23" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="15d-Pr-je8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FNX-pJ-9Yy">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FNX-pJ-9Yy" id="8ph-pN-X7v">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hrh-ki-MRR" id="Dtb-ka-gvw"/>
+                            <outlet property="delegate" destination="hrh-ki-MRR" id="Zgw-xK-kao"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Friends" id="iYQ-Ei-9HI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WM8-rd-VqH">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addName:" destination="hrh-ki-MRR" id="x50-p9-StP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="wZL-Tv-3bd" kind="show" identifier="showDetail" id="5Ie-jZ-2lf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSR-wr-O5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="-630"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="Ila-6c-F3t">
+            <objects>
+                <viewController title="Detail" id="wZL-Tv-3bd" customClass="DeatilsViewController" customModule="idm362_jwt23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="slD-hu-kN4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big Name Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euu-bl-KjW">
+                                <rect key="frame" x="58" y="401.66666666666669" width="277.33333333333331" height="49"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oav-9o-WI8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="euu-bl-KjW" firstAttribute="centerY" secondItem="slD-hu-kN4" secondAttribute="centerY" id="F0u-lQ-dRk"/>
+                            <constraint firstItem="euu-bl-KjW" firstAttribute="centerX" secondItem="slD-hu-kN4" secondAttribute="centerX" id="bxR-w3-cIG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7zi-Xq-zRS"/>
+                    <connections>
+                        <outlet property="bigName" destination="euu-bl-KjW" id="WeK-Xh-C6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfH-Fj-Sgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="-630"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="mWo-BB-JjJ">
+            <objects>
+                <navigationController id="Cyu-kE-yH4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.fill" catalog="system" id="M5P-QD-yUI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ytv-Vz-OU8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hrh-ki-MRR" kind="relationship" relationship="rootViewController" id="482-g2-ZSS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXL-4D-5QJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-929" y="-630"/>
         </scene>
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
@@ -319,6 +407,7 @@
         <image name="eraser.fill" catalog="system" width="128" height="119"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="people" width="30" height="30"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.44999998807907104" green="0.98100000619888306" blue="0.47400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A716F5C529B0F01D00814C79 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716F5C429B0F01D00814C79 /* TableViewController.swift */; };
+		A716F5C729B1003800814C79 /* DeatilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716F5C629B1003800814C79 /* DeatilsViewController.swift */; };
 		A7202419299E5C9700B9FDEA /* ViewControllerAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7202418299E5C9700B9FDEA /* ViewControllerAbout.swift */; };
 		A74E8C17299522260013A928 /* ViewControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E8C16299522260013A928 /* ViewControllerSettings.swift */; };
 		A770B7902979914200824B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770B78F2979914200824B3A /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A716F5C429B0F01D00814C79 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = "idm362-jwt23/TableViewController.swift"; sourceTree = "<group>"; };
+		A716F5C629B1003800814C79 /* DeatilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeatilsViewController.swift; path = "idm362-jwt23/DeatilsViewController.swift"; sourceTree = "<group>"; };
 		A7202418299E5C9700B9FDEA /* ViewControllerAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAbout.swift; sourceTree = "<group>"; };
 		A74E8C16299522260013A928 /* ViewControllerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSettings.swift; sourceTree = "<group>"; };
 		A770B78C2979914200824B3A /* idm362-jwt23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idm362-jwt23.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,8 @@
 		A770B7832979914200824B3A = {
 			isa = PBXGroup;
 			children = (
+				A716F5C629B1003800814C79 /* DeatilsViewController.swift */,
+				A716F5C429B0F01D00814C79 /* TableViewController.swift */,
 				A770B78E2979914200824B3A /* idm362-jwt23 */,
 				A770B78D2979914200824B3A /* Products */,
 			);
@@ -201,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A770B7942979914200824B3A /* ViewController.swift in Sources */,
+				A716F5C529B0F01D00814C79 /* TableViewController.swift in Sources */,
+				A716F5C729B1003800814C79 /* DeatilsViewController.swift in Sources */,
 				A7202419299E5C9700B9FDEA /* ViewControllerAbout.swift in Sources */,
 				A770B7902979914200824B3A /* AppDelegate.swift in Sources */,
 				A770B7922979914200824B3A /* SceneDelegate.swift in Sources */,
