@@ -79,6 +79,7 @@ class TableViewControllerFriends: UITableViewController {
 //        // cell.textLabel?.text = fNames[indexPath.row]
 //        cell.fName?.text = fNames[indexPath.row]
         
+        
         // COREDATA 5
         let personObj = peopleObj[indexPath.row]
         cell.fName?.text = personObj.value(forKey: "name") as? String
@@ -113,8 +114,8 @@ class TableViewControllerFriends: UITableViewController {
 //        fNames.remove(at: indexPath.row)
 //        print("fname count \(fNames)")
         
-        // COREDATA 8
-        // extract person from array
+        // COREDATA 10
+        // extract person from CoreData
         let onePerson = peopleObj[indexPath.row]
         // Delete that person from context
         context.delete(onePerson)
@@ -198,10 +199,10 @@ class TableViewControllerFriends: UITableViewController {
 
     let person = NSManagedObject(entity: entity, insertInto: managedContext)
 
-    // 3
+    // Target ONE person in entity
     person.setValue(name, forKeyPath: "name")
 
-    // 4
+    // 3
     do {
       try managedContext.save()
       peopleObj.append(person)
